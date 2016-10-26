@@ -1,0 +1,9 @@
+<p>Listado de peliculas</p>
+<ul>
+  <ul *ngFor = "let pelicula of peliculas">
+    <li>Titulo: {{pelicula.titulo}}</li>
+    <li>Director: {{pelicula.director}}</li>
+    <li *ngIf="pelicula.anio" >Año: {{pelicula.anio}}</li>
+    <br>
+  </ul>
+</ul>
