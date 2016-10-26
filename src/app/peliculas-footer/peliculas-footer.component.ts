@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './peliculas-footer.component.html',
   styleUrls: ['./peliculas-footer.component.css']
 })
+
 export class PeliculasFooterComponent implements OnInit {
 
   constructor() { }

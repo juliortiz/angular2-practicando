@@ -11,7 +11,7 @@ export class AppComponent {
 
   
   constructor(){
-   this.titulo = "LISTADO DE PELICULAS";
+   this.titulo = "LISTADO DE PELICULAS2";
   }
   
  
