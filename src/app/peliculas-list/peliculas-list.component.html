@@ -20,8 +20,8 @@
 </p>
 <hr>
 <p>Listado de peliculas</p>
-  <ul *ngFor = "let pelicula of peliculas">
-    <li (click)="onCambiarPelicula(pelicula)" class="c_pointer">Titulo: {{pelicula.titulo}}</li>
+  <ul *ngFor = "let pelicula of peliculas" class="peliculas-list">
+    <li (click)="onCambiarPelicula(pelicula)" class="title-pelicula" [class.select]="peliculaElegida.id === pelicula.id" >Titulo: {{pelicula.titulo}}</li>
     <li>Director: {{pelicula.director}}</li>
     <li *ngIf="pelicula.anio" >Año: {{pelicula.anio}}</li>
     <br>

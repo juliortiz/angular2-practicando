@@ -10,11 +10,11 @@ import { Pelicula } from '../pelicula';
 export class PeliculasListComponent implements OnInit {
   
   public pelicula:Pelicula;
+  public peliculaElegida:Pelicula;
   public mostrarDatos:boolean;
   public peliculas:Array<Pelicula>;
 
   constructor() { 
-    this.pelicula = new Pelicula(1,"Pelicula OP","Pepito grillo", 1956);
     this.mostrarDatos = false;
     this.peliculas = [
       new Pelicula(1,"Pelicula OP1","Pepito grillo 1", 2001),
@@ -24,6 +24,8 @@ export class PeliculasListComponent implements OnInit {
       new Pelicula(5,"Pelicula OP5","Pepito grillo 5", 1945),
       new Pelicula(6,"Pelicula OP6","Pepito grillo 6", 1978)
     ]
+    this.pelicula = this.peliculas[0];
+    this.peliculaElegida = this.peliculas[0];    
   }
 
   onShowHide(value){
@@ -39,8 +41,8 @@ export class PeliculasListComponent implements OnInit {
   }
 
   onCambiarPelicula(pelicula){
-    this.pelicula = pelicula
-    console.log(this.pelicula);
+    this.pelicula = pelicula;
+    this.peliculaElegida = pelicula;
   }
   ngOnInit() {
   }
