@@ -6,7 +6,6 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { PeliculasListComponent } from './peliculas-list/peliculas-list.component';
 import { PeliculasFooterComponent } from './peliculas-footer/peliculas-footer.component';
-import { PeliculasFavoriteComponent } from './peliculas-favorite/peliculas-favorite.component';
 
 
 @NgModule({
@@ -14,7 +13,6 @@ import { PeliculasFavoriteComponent } from './peliculas-favorite/peliculas-favor
     AppComponent,
     PeliculasListComponent,
     PeliculasFooterComponent,
-    PeliculasFavoriteComponent
   ],
   imports: [
     BrowserModule,

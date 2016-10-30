@@ -3,16 +3,19 @@ import { Pelicula } from '../pelicula';
 
 @Component({
   selector: 'app-peliculas-list',
-  templateUrl: './peliculas-list.component.html'
+  templateUrl: './peliculas-list.component.html',
+  styleUrls: ['./app-peliculas-list.styl']
 })
 
 export class PeliculasListComponent implements OnInit {
   
   public pelicula:Pelicula;
+  public mostrarDatos:boolean;
   public peliculas:Array<Pelicula>;
 
   constructor() { 
     this.pelicula = new Pelicula(1,"Pelicula OP","Pepito grillo", 1956);
+    this.mostrarDatos = false;
     this.peliculas = [
       new Pelicula(1,"Pelicula OP1","Pepito grillo 1", 2001),
       new Pelicula(2,"Pelicula OP2","Pepito grillo 2", 1656),
@@ -23,6 +26,22 @@ export class PeliculasListComponent implements OnInit {
     ]
   }
 
+  onShowHide(value){
+    this.mostrarDatos = value;
+  }
+
+  debug(titulo = null){
+    if(titulo === null){
+      console.log(this.pelicula);
+    }else{
+      console.log("nuevo titulo es:"+ this.pelicula.titulo);
+    }
+  }
+
+  onCambiarPelicula(pelicula){
+    this.pelicula = pelicula
+    console.log(this.pelicula);
+  }
   ngOnInit() {
   }
 
