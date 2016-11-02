@@ -1,3 +1,6 @@
+<!--<p>{{datoServicio}}</p>-->
+<h2>LISTADO DE PELICULAS</h2>
+
 <p>Pelicula favorita</p>
 
 <button (click) = "onShowHide(true)" [class.showingData]="mostrarDatos === true">
@@ -25,5 +28,6 @@
     <li (click)="onCambiarPelicula(pelicula)" class="title-pelicula" [class.select]="peliculaElegida.id === pelicula.id" >Titulo: {{pelicula.titulo}}</li>
     <li>Director: {{pelicula.director}}</li>
     <li *ngIf="pelicula.anio" >Año: {{pelicula.anio}}</li>
+    <li><a [routerLink]="['/otro',pelicula.titulo]">Añadir en base a este</a></li>
     <br>
   </ul>
